@@ -50,11 +50,4 @@ public class PersonController  {
         model.addAttribute("read", this.personService.read());
         return "people";
     }
-
-    @RequestMapping("persondata/{id}")
-    public String personDate(@PathVariable("id") int id, Model model){
-        model.addAttribute("person", this.personService.getPersonById(id));
-        return "persondata";
-    }
-
 }
